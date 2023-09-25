@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "ats"
+version = "0.1.0"
+description = "Lança ATS, Progressão e acertas as férias decorrentes deles"
+authors = ["Igor Josafa Torres Barbosa <igor.barbosa@cl.df.gov.br>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.1.0"
+mrh-web = {path = "mrh-web"}
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.25.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]

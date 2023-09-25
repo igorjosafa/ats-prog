@@ -1,0 +1,5 @@
+Matricula         22948
+Nome            asfdsaf
+Padrao Atual        NaN
+Padrao Novo         NaN
+Name: 37, dtype: object

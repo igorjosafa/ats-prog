@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "mrh-web"
+version = "0.1.0"
+description = "Ferramenta para controlar o sistema OSM Mentorh por meio do navegador WEB."
+authors = ["Danilo G. Botelho <danilo.botelho@cl.df.gov.br>"]
+readme = "README.rst"
+packages = [{include = "mrh"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+beautifulsoup4 = "^4.12.2"
+pydantic = "^1.10.7"
+PyYAML = "^6.0"
+selenium = "^4.8.3"
+
+[tool.poetry.group.dev.dependencies]
+chromedriver-autoinstaller = "^0.4.0"
+pytest = "^7.2.2"
+Sphinx = "^6.1.3"
+
+[tool.poetry.scripts]
+fopag-docs = 'mrh.web.scripts.fopag_docs:main'
+fopag-sql = 'mrh.web.scripts.fopag_sql:main'
+fopag-ats = 'mrh.web.scripts.fopag_ats:main'
+fopag-progressao = 'mrh.web.scripts.fopag_progressao:main'
+fopag-ferias-ats-progressao = 'mrh.web.scripts.fopag_ferias_ats_prog:main'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
