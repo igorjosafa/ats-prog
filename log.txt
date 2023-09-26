@@ -1,0 +1,106 @@
+
+-----SERVIDORES QUE O ATS AUMENTOU MAIS DE 1%-----
+
+Nome             ANDRE SPILLER FERNANDES
+Matricula                          23993
+ATS anterior                           0
+ATS novo                               4
+Diferenca ATS                          4
+Name: 1, dtype: object
+
+Nome             SIMONE RODRIGUES DA SILVA ARAUJO
+Matricula                                   23563
+ATS anterior                                    0
+ATS novo                                       12
+Diferenca ATS                                  12
+Name: 5, dtype: object
+
+-----SERVIDORES QUE O MENTORH NÃO CONSIDEROU OS AFASTAMENTOS-----
+
+-----SERVIDORES QUE O ATS AUMENTOU MAIS DE 1%-----
+
+Nome             CRISTIANE LEITE PEREIRA
+Matricula                          23672
+ATS anterior                           0
+ATS novo                              11
+Diferenca ATS                         11
+Name: 9, dtype: object
+
+Nome             PABLO RANGELL MENDES RIOS PEREIRA
+Matricula                                    23590
+ATS anterior                                     0
+ATS novo                                         2
+Diferenca ATS                                    2
+Name: 39, dtype: object
+
+-----SERVIDORES QUE O MENTORH NÃO CONSIDEROU OS AFASTAMENTOS-----
+
+Matricula                              11201
+Nome             LUCIMAR OLIVEIRA NASCIMENTO
+Dt_Inicio                         21/12/2019
+Dt_Fim                            25/07/2022
+Dias_Afastado                             23
+Ultimo_Ano                              2022
+Novo_Inicio                                8
+Name: 6, dtype: object
+
+-----SERVIDORES QUE O MENTORH NÃO GEROU ATS-----
+
+Matricula                        12345
+Nome             TESTE FORA DO MENTORH
+Dt_Inicio                   29/11/2019
+Dt_Fim                      03/07/2022
+Dias_Afastado                      NaN
+Ultimo_Ano                        2022
+Novo_Inicio                          7
+Name: 17, dtype: object
+
+-----SERVIDORES QUE O MENTORH NÃO CONSIDEROU OS AFASTAMENTOS-----
+
+Matricula         22948
+Nome            asfdsaf
+Padrao Atual        NaN
+Padrao Novo         NaN
+Name: 37, dtype: object
+
+-----SERVIDORES QUE O MENTORH NÃO GEROU PROGRESSÃO-----
+
+Matricula          10259
+Classe                 B
+Padrao               B34
+DataIngPadrao        NaN
+Dias_Desconto        NaN
+Data_Progressao      NaN
+Name: 38, dtype: object
+
+-----SERVIDORES COM FERIAS MARCADAS E MUDANCA DE ATS, MAS SEM 1013 E 1014 NA FOLHA NORMAL-----
+
+Matricula         11225.00
+R1028_Antiga      13769.28
+R1028_Nova        14113.51
+R1013_Antiga          0.00
+R1014_Antiga          0.00
+R1013_Ajustada        0.00
+R1014_Ajustada        0.00
+Name: 16, dtype: float64
+
+-----SERVIDORES COM FERIAS MARCADAS E MUDANCA DE ATS, MAS JÁ NO TETO DO 1013 E 1014-----
+
+-----SERVIDORES COM FERIAS MARCADAS E MUDANCA DE PADRAO, MAS SEM 1013 E 1014 NA FOLHA NORMAL-----
+
+-----SERVIDORES COM FERIAS MARCADAS E MUDANCA DE PADRAO, MAS JÁ NO TETO DO 1013 E 1014-----
+
+Matricula         16832.00
+R1002_Antiga      31185.74
+R1007_Antiga        935.57
+R1028_Antiga       4677.86
+R1170_Antiga       4677.86
+R1013_Antiga      12529.98
+R1014_Antiga      16706.22
+R1002_Nova        31965.38
+R1007_Nova          958.96
+R1028_Nova         4794.80
+R1170_Nova         4794.80
+R1013_Ajustada        0.00
+R1014_Ajustada        0.00
+Name: 377, dtype: float64

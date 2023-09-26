@@ -1,7 +1,0 @@
-Matricula          10259
-Classe                 B
-Padrao               B34
-DataIngPadrao        NaN
-Dias_Desconto        NaN
-Data_Progressao      NaN
-Name: 38, dtype: object
