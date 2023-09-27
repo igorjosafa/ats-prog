@@ -1,8 +1,8 @@
-11225	1013	0	0,0	1	1	V	N	Acerto de férias em decorrência de progressão e/ou aumento de ATS	072023	0	0	072023
-11225	1014	0	0,0	1	1	V	N	Acerto de férias em decorrência de progressão e/ou aumento de ATS	072023	0	0	072023
-23553	1013	0	41,75	1	1	V	N	Acerto de férias em decorrência de progressão e/ou aumento de ATS	072023	0	0	072023
-23553	1014	0	55,66	1	1	V	N	Acerto de férias em decorrência de progressão e/ou aumento de ATS	072023	0	0	072023
-16832	1013	0	0,0	1	1	V	N	Acerto de férias em decorrência de progressão e/ou aumento de ATS	072023	0	0	072023
-16832	1014	0	0,0	1	1	V	N	Acerto de férias em decorrência de progressão e/ou aumento de ATS	072023	0	0	072023
-22700	1013	0	201,11	1	1	V	N	Acerto de férias em decorrência de progressão e/ou aumento de ATS	072023	0	0	072023
-22700	1014	0	268,14	1	1	V	N	Acerto de férias em decorrência de progressão e/ou aumento de ATS	072023	0	0	072023
+11781	1013	0	36,3	1	1	V	N	Acerto de férias em decorrência de progressão e/ou aumento de ATS	102023	0	0	102023
+11781	1014	0	48,4	1	1	V	N	Acerto de férias em decorrência de progressão e/ou aumento de ATS	102023	0	0	102023
+13102	1013	0	0,0	1	1	V	N	Acerto de férias em decorrência de progressão e/ou aumento de ATS	102023	0	0	102023
+13102	1014	0	0,0	1	1	V	N	Acerto de férias em decorrência de progressão e/ou aumento de ATS	102023	0	0	102023
+23013	1013	0	447,8	1	1	V	N	Acerto de férias em decorrência de progressão e/ou aumento de ATS	102023	0	0	102023
+23013	1014	0	597,07	1	1	V	N	Acerto de férias em decorrência de progressão e/ou aumento de ATS	102023	0	0	102023
+23020	1013	0	597,4	1	1	V	N	Acerto de férias em decorrência de progressão e/ou aumento de ATS	102023	0	0	102023
+23020	1014	0	796,54	1	1	V	N	Acerto de férias em decorrência de progressão e/ou aumento de ATS	102023	0	0	102023

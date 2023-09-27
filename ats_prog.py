@@ -11,8 +11,6 @@ import numpy as np
 def gera(mes, ano):
     gera_ats(mes, ano)
     gera_progressao(mes, ano)
-    gera_relatorio_ferias(mes, ano)
-    gera_relatorio_bases(mes, ano)
     print("\nATS e progressões gerados.")
     print("Congele e recalcule a folha. Em seguida execute novamente o script a opção -f para conferir os lançamentos e calcular os acertos de férias.")
 
@@ -61,13 +59,16 @@ def incluir_matriculas_manualmente(matriculas, tipo):
         if re.match('^(\d{5};{0,1})*$', matriculas_a_acrescentar):
             matriculas_a_acrescentar = matriculas_a_acrescentar.split(';')
             print("Matriculas a acrescentar: ", matriculas_a_acrescentar)
-            for matricula in matriculas_a_acrescentar:
-                matriculas.at[len(matriculas)+1] = int(matricula)
+            if matriculas_a_acrescentar[0] != '':
+                for matricula in matriculas_a_acrescentar:
+                    matriculas.at[len(matriculas)+1] = int(matricula)
             return matriculas
         else:
             print("\nFormato inadequado. Insira novamente\n")
 
 def confere_lancamentos_acerta_ferias(mes, ano):
+    gera_relatorio_ferias(mes, ano)
+    gera_relatorio_bases(mes, ano)
     matriculas_ats = confere_ats_gerados(mes, ano)
     matriculas_progressao = confere_progressoes_geradas(mes, ano)
     matriculas_progressao = incluir_matriculas_manualmente(matriculas_progressao, 'progressão')
@@ -78,6 +79,8 @@ def confere_lancamentos_acerta_ferias(mes, ano):
 
 
 def main():
+    log = open('log.txt', 'w')
+    log.close()
     parser = argparse.ArgumentParser(
         prog='ats-prog',
         description = "Gera ATS e Progressão na folha normal e os acertos de férias na folha complementar."

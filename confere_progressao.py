@@ -5,10 +5,10 @@ import re
 def le_progressoes_geradas_mentorh(mes, ano):
     df = pd.read_csv('.\\PROGRESSAO - {}-{}\\progressoes geradas - {:02}-{}.csv'.format(mes, ano, mes, ano), names=range(8), delimiter=';')
     df_progressoes_mentorh = pd.DataFrame()
-    df_progressoes_mentorh['Matricula'] = [int(matricula) for indice, matricula in enumerate(df[0]) if indice%2-1 == 0]
-    df_progressoes_mentorh['Nome'] = [nome for indice, nome in enumerate(df[1]) if indice%2-1 == 0]
-    df_progressoes_mentorh['Padrao Atual'] = [padrao for indice, padrao in enumerate(df[5]) if indice%2-1 == 0]
-    df_progressoes_mentorh['Padrao Novo'] = [padrao for indice, padrao in enumerate(df[6]) if indice%2-1 == 0]
+    df_progressoes_mentorh['Matricula'] = [int(matricula) for indice, matricula in enumerate(df[1]) if indice%2-1 == 0]
+    df_progressoes_mentorh['Nome'] = [nome for indice, nome in enumerate(df[2]) if indice%2-1 == 0]
+    df_progressoes_mentorh['Padrao Atual'] = [padrao for indice, padrao in enumerate(df[6]) if indice%2-1 == 0]
+    df_progressoes_mentorh['Padrao Novo'] = [padrao for indice, padrao in enumerate(df[7]) if indice%2-1 == 0]
     return df_progressoes_mentorh
 
 def matriculas_para_incluir_progressao(df, mes, ano):

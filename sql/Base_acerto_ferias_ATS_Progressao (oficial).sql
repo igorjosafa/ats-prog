@@ -16,6 +16,10 @@ SELECT Servidor->Matricula, MesAnoCompetencia as Mes_Recebimento, ServidorCongel
   ELSE 0
  END) as R1170_Antiga,
  SUM(CASE
+  WHEN Rubrica->Codigo = 1067 & MONTH(TO_DATE(Folha->FolhaMes, 'MM')) = :p2 THEN Valor/100
+  ELSE 0
+ END) as R1067_Antiga,
+ SUM(CASE
   WHEN Rubrica->Codigo = 1013 & MONTH(TO_DATE(Folha->FolhaMes, 'MM')) = :p2 THEN Valor/100
   ELSE 0
  END) as R1013_Antiga,
@@ -38,12 +42,16 @@ SELECT Servidor->Matricula, MesAnoCompetencia as Mes_Recebimento, ServidorCongel
  SUM(CASE
   WHEN Rubrica->Codigo = 1170 & MONTH(TO_DATE(Folha->FolhaMes, 'MM')) = :p4 THEN Valor/100
   ELSE 0
- END) as R1170_Nova
+ END) as R1170_Nova,
+ SUM(CASE
+  WHEN Rubrica->Codigo = 1067 & MONTH(TO_DATE(Folha->FolhaMes, 'MM')) = :p4 THEN Valor/100
+  ELSE 0
+ END) as R1067_Nova
  FROM RhFolCalculo
  WHERE (Folha->FolhaAno = :p1
  AND MONTH(TO_DATE(Folha->FolhaMes, 'MM')) = :p2
  OR
  Folha->FolhaAno = :p3
  AND MONTH(TO_DATE(Folha->FolhaMes, 'MM')) = :p4)
- AND Rubrica->Codigo IN (1002, 1007, 1013, 1014, 1028, 1170)
+ AND Rubrica->Codigo IN (1002, 1007, 1013, 1014, 1028, 1170, 1067)
  GROUP BY Servidor->Matricula
