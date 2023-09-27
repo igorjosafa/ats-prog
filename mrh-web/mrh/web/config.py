@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-#LOGIN_URL = 'http://mentorh.cl.df.gov.br/csp/cldf/index.csp'
-LOGIN_URL = 'http://mentorh_homologacao.cl.df.gov.br/csp/cldf/index.csp'
+LOGIN_URL = 'http://mentorh.cl.df.gov.br/csp/cldf/index.csp'
+# LOGIN_URL = 'http://mentorh_homologacao.cl.df.gov.br/csp/cldf/index.csp'
 
 GRID_ITEM_0 = "grid1.data.item:0.item:0"
 

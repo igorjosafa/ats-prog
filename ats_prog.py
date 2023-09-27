@@ -1,5 +1,6 @@
 import argparse
 import pandas as pd
+import re
 from gera_ats_progressao import gera_ats, gera_progressao, gera_relatorio_ferias, gera_relatorio_bases
 from confere_ats import le_ats_gerados_mentorh, pulou_mais_de_um, matriculas_para_tirar_ats, matriculas_para_incluir_ats
 from confere_progressao import le_progressoes_geradas_mentorh, matriculas_para_tirar_progressao, matriculas_para_incluir_progressao
@@ -54,10 +55,24 @@ def acerta_ferias(mes, ano, matriculas_ats, matriculas_progressao):
 
     return ferias_acertadas_ats, ferias_acertadas_progressao
 
+def incluir_matriculas_manualmente(matriculas, tipo):
+    while True:
+        matriculas_a_acrescentar = input(f"Caso haja lançamentos manuais de {tipo}, informe as matriculas separadas por ponto e virgula para conferência de férias.\nCaso não haja, pressione enter: ")
+        if re.match('^(\d{5};{0,1})*$', matriculas_a_acrescentar):
+            matriculas_a_acrescentar = matriculas_a_acrescentar.split(';')
+            print("Matriculas a acrescentar: ", matriculas_a_acrescentar)
+            for matricula in matriculas_a_acrescentar:
+                matriculas.at[len(matriculas)+1] = int(matricula)
+            return matriculas
+        else:
+            print("\nFormato inadequado. Insira novamente\n")
+
 def confere_lancamentos_acerta_ferias(mes, ano):
     matriculas_ats = confere_ats_gerados(mes, ano)
     matriculas_progressao = confere_progressoes_geradas(mes, ano)
+    matriculas_progressao = incluir_matriculas_manualmente(matriculas_progressao, 'progressão')
     matriculas_ats = exclui_repetidos(matriculas_ats, matriculas_progressao)
+    matriculas_ats = incluir_matriculas_manualmente(matriculas_ats, 'ATS')
     ferias_acertadas_ats, ferias_acertadas_progressao = acerta_ferias(mes, ano, matriculas_ats, matriculas_progressao)
     gera_arquivo_importacao(ferias_acertadas_ats, ferias_acertadas_progressao, mes, ano)
 
