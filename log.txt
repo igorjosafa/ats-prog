@@ -22,36 +22,6 @@ Name: 7, dtype: object
 
 -----SERVIDORES QUE O MENTORH NÃO GEROU ATS-----
 
-Unnamed: 0                                  NaN
-Matricula                                 11336
-Nome             FABIO RIVAS DE ALMEIDA FISCHER
-Dt_Inicio                            22/12/2022
-Dt_Fim                               23/10/2023
-Dias_Afastado                                  
-Ultimo_Ano                                 2023
-Novo_Inicio                                  10
-Name: 0, dtype: object
-
-Unnamed: 0                         NaN
-Matricula                        24324
-Nome             MAYARA CARELE CHELLES
-Dt_Inicio                   27/06/2023
-Dt_Fim                      15/10/2023
-Dias_Afastado                         
-Ultimo_Ano                        2023
-Novo_Inicio                         10
-Name: 1, dtype: object
-
-Unnamed: 0                          NaN
-Matricula                         24312
-Nome             FERNANDO LUIZ DA SILVA
-Dt_Inicio                    21/06/2023
-Dt_Fim                       15/10/2023
-Dias_Afastado                          
-Ultimo_Ano                         2023
-Novo_Inicio                          10
-Name: 2, dtype: object
-
 -----SERVIDORES QUE O MENTORH NÃO CONSIDEROU OS AFASTAMENTOS-----
 
 Matricula                           16769
@@ -68,9 +38,11 @@ Name: 2, dtype: object
 
 Matricula         13102.00
 R1028_Antiga       9386.89
+R1067_Antiga          0.00
 R1028_Nova         9747.92
 R1013_Antiga      12529.98
 R1014_Antiga          0.00
+R1067_Nova            0.00
 R1013_Ajustada        0.00
 R1014_Ajustada        0.00
 Name: 235, dtype: float64

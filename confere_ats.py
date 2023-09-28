@@ -27,6 +27,7 @@ def matriculas_para_incluir_ats(df, mes, ano):
     log.write('\n-----SERVIDORES QUE O MENTORH NÃO GEROU ATS-----\n')
     df_SQL = pd.read_csv('.\\ATS - {}-{}\\ats gerados - {:02}-{} SQL.csv'.format(mes, ano, mes, ano), delimiter=';')
     df_SQL['Matricula'] = df_SQL['Matricula'].astype(int)
+    df_SQL = df_SQL[df_SQL['Ultimo_Ano'] != ano]
     df_SQL['Novo_Inicio'] = df_SQL['Novo_Inicio'].apply(lambda x: int(str(x)[-7:-5]) if len(str(x))>1 else mes)
     matriculas_SQL_fora_do_mentorh = df_SQL[df_SQL['Novo_Inicio'] == mes]
     matriculas_SQL_fora_do_mentorh = matriculas_SQL_fora_do_mentorh[matriculas_SQL_fora_do_mentorh['Matricula'].apply(lambda x: x not in list(df['Matricula']))]

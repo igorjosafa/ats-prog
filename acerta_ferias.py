@@ -7,15 +7,15 @@ def acerta_ferias_ats(matriculas_ats, matriculas_ferias, bases):
 
     bases_ats = bases[bases['Matricula'].apply(lambda x: x in matriculas_ats.values)]
     bases_ats_ferias = bases_ats[bases_ats['Matricula'].apply(lambda x: x in matriculas_ferias.values)]
-    bases_ats_ferias = bases_ats_ferias[['Matricula', 'R1028_Antiga', 'R1028_Nova', 'R1013_Antiga', 'R1014_Antiga']]
+    bases_ats_ferias = bases_ats_ferias[['Matricula', 'R1028_Antiga', 'R1067_Antiga', 'R1028_Nova', 'R1013_Antiga', 'R1014_Antiga', 'R1067_Nova']]
 
     ferias_acertadas = bases_ats_ferias
 
-    ferias_acertadas['R1013_Ajustada'] = np.where(ferias_acertadas['R1013_Antiga'].astype(float) > 0.0, np.trunc((ferias_acertadas['R1028_Nova'] - ferias_acertadas['R1028_Antiga'])*100/3)/100, ferias_acertadas['R1013_Antiga'])
+    ferias_acertadas['R1013_Ajustada'] = np.where(ferias_acertadas['R1013_Antiga'].astype(float) > 0.0, np.trunc((ferias_acertadas['R1028_Nova'] + ferias_acertadas['R1067_Nova'] - ferias_acertadas['R1028_Antiga'] - ferias_acertadas['R1067_Antiga'])*100/3)/100, ferias_acertadas['R1013_Antiga'])
 
     ferias_acertadas['R1013_Ajustada'] = np.where((ferias_acertadas['R1013_Antiga'].astype(float) + ferias_acertadas['R1013_Ajustada'].astype(float) > TETO/3), np.trunc((TETO/3 - ferias_acertadas['R1013_Antiga'].astype(float))*100)/100, ferias_acertadas['R1013_Ajustada'])
 
-    ferias_acertadas['R1014_Ajustada'] = np.where(ferias_acertadas['R1014_Antiga'].astype(float) > 0.0, np.trunc((ferias_acertadas['R1028_Nova'] - ferias_acertadas['R1028_Antiga'])*133.33/3)/100, ferias_acertadas['R1014_Antiga'])
+    ferias_acertadas['R1014_Ajustada'] = np.where(ferias_acertadas['R1014_Antiga'].astype(float) > 0.0, np.trunc((ferias_acertadas['R1028_Nova'] - ferias_acertadas['R1028_Antiga'] + ferias_acertadas['R1013_Ajustada'])*100/3)/100, ferias_acertadas['R1014_Antiga'])
 
     ferias_acertadas['R1014_Ajustada'] = np.where((ferias_acertadas['R1014_Antiga'].astype(float) + ferias_acertadas['R1014_Ajustada'].astype(float) > 1.3333*TETO/3), np.trunc((1.3333*TETO/3 - ferias_acertadas['R1014_Antiga'].astype(float))*100)/100, ferias_acertadas['R1014_Ajustada'])
 

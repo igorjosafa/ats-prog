@@ -6,6 +6,7 @@ from confere_ats import le_ats_gerados_mentorh, pulou_mais_de_um, matriculas_par
 from confere_progressao import le_progressoes_geradas_mentorh, matriculas_para_tirar_progressao, matriculas_para_incluir_progressao
 from acerta_ferias import acerta_ferias_ats, acerta_ferias_progressao
 from gera_importacao import gera_arquivo_importacao
+from datetime import datetime, timedelta
 import numpy as np
 
 def gera(mes, ano):
@@ -75,7 +76,9 @@ def confere_lancamentos_acerta_ferias(mes, ano):
     matriculas_ats = exclui_repetidos(matriculas_ats, matriculas_progressao)
     matriculas_ats = incluir_matriculas_manualmente(matriculas_ats, 'ATS')
     ferias_acertadas_ats, ferias_acertadas_progressao = acerta_ferias(mes, ano, matriculas_ats, matriculas_progressao)
-    gera_arquivo_importacao(ferias_acertadas_ats, ferias_acertadas_progressao, mes, ano)
+    mes_ferias = datetime(day=1, month=mes, year=ano)
+    mes_folha = mes_ferias - timedelta(days=2)
+    gera_arquivo_importacao(ferias_acertadas_ats, ferias_acertadas_progressao, mes_folha.month, mes_folha.year)
 
 
 def main():
