@@ -1,51 +1,54 @@
 
 -----SERVIDORES QUE O ATS AUMENTOU MAIS DE 1%-----
 
-Nome             LUCIANO DARTORA
-Matricula                  23996
-ATS anterior                   0
-ATS novo                       9
-Diferenca ATS                  9
-Name: 16, dtype: object
+Nome             JANAINA LOPES BOTELHO SCARDUA
+Matricula                                23767
+ATS anterior                                 0
+ATS novo                                    15
+Diferenca ATS                               15
+Name: 12, dtype: object
 
 -----SERVIDORES QUE O MENTORH NÃO CONSIDEROU OS AFASTAMENTOS-----
-
-Unnamed: 0                                 NaN
-Matricula                                12488
-Nome             REGINA CELIA RODRIGUES MACEDO
-Dt_Inicio                           13/03/2020
-Dt_Fim                              27/10/2022
-Dias_Afastado                                9
-Ultimo_Ano                                2022
-Novo_Inicio                                 11
-Name: 7, dtype: object
 
 -----SERVIDORES QUE O MENTORH NÃO GEROU ATS-----
 
+Unnamed: 0                              NaN
+Matricula                             23296
+Nome             ANDRESSA VIDAL LOPES MEIRA
+Dt_Inicio                        04/11/2021
+Dt_Fim                           14/11/2022
+Dias_Afastado                              
+Ultimo_Ano                             2022
+Novo_Inicio                              11
+Name: 11, dtype: object
+
 -----SERVIDORES QUE O MENTORH NÃO CONSIDEROU OS AFASTAMENTOS-----
 
-Matricula                           16769
-Nome            JOSE ANTONIO CORREA LAGES
-Padrao Atual                          B58
-Padrao Novo                           B59
-Name: 2, dtype: object
-
 -----SERVIDORES QUE O MENTORH NÃO GEROU PROGRESSÃO-----
+
+Unnamed: 0                         NaN
+Matricula                        16769
+Classe                               C
+Padrao                             B58
+DataIngPadrao               2022-10-21
+Dias_Desconto                       18
+Data_Progressao    2023-11-08 00:00:00
+Name: 3, dtype: object
 
 -----SERVIDORES COM FERIAS MARCADAS E MUDANCA DE ATS, MAS SEM 1013 E 1014 NA FOLHA NORMAL-----
 
 -----SERVIDORES COM FERIAS MARCADAS E MUDANCA DE ATS, MAS JÁ NO TETO DO 1013 E 1014-----
 
-Matricula         13102.00
-R1028_Antiga       9386.89
+Matricula         11140.00
+R1028_Antiga      10108.96
 R1067_Antiga          0.00
-R1028_Nova         9747.92
-R1013_Antiga      12529.98
+R1028_Nova        10469.99
+R1013_Antiga      13883.64
 R1014_Antiga          0.00
 R1067_Nova            0.00
-R1013_Ajustada        0.00
+R1013_Ajustada    -1353.65
 R1014_Ajustada        0.00
-Name: 235, dtype: float64
+Name: 4, dtype: float64
 
 -----SERVIDORES COM FERIAS MARCADAS E MUDANCA DE PADRAO, MAS SEM 1013 E 1014 NA FOLHA NORMAL-----
 

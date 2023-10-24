@@ -7,7 +7,6 @@ from mrh.web.scripts.fopag_sql import fopag_sql
 from dotenv import load_dotenv
 import getpass
 import os
-TETO = 37589.95
 
 
 def recebe_usuario_mentorh():

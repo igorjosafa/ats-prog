@@ -36,8 +36,12 @@ def matriculas_para_incluir_ats(df, mes, ano):
             log.write('\n')
             linha = row
             log.write(f"{linha}\n")
-    log.close()
-    return matriculas_SQL_fora_do_mentorh['Matricula']
+        log.close()
+        return matriculas_SQL_fora_do_mentorh['Matricula']
+    else:
+        log.close()
+        matriculas_SQL_fora_do_mentorh['Matricula'] = []
+        return matriculas_SQL_fora_do_mentorh['Matricula']
 
 def matriculas_para_tirar_ats(df, mes, ano):
     log = open('log.txt', 'a+')
@@ -52,5 +56,9 @@ def matriculas_para_tirar_ats(df, mes, ano):
             log.write('\n')
             linha = row
             log.write(f"{linha}\n")
-    log.close()
-    return matriculas_com_afastamento['Matricula']
+        log.close()
+        return matriculas_com_afastamento['Matricula']
+    else:
+        log.close()
+        matriculas_com_afastamento['Matricula'] = []
+        return matriculas_com_afastamento['Matricula']

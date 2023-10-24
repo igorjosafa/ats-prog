@@ -13,7 +13,7 @@ def gera(mes, ano):
     gera_ats(mes, ano)
     gera_progressao(mes, ano)
     print("\nATS e progressões gerados.")
-    print("Congele e recalcule a folha. Em seguida execute novamente o script a opção -f para conferir os lançamentos e calcular os acertos de férias.")
+    print("Congele e recalcule a folha. Em seguida execute novamente o script a opção -c para conferir os lançamentos e calcular os acertos de férias.")
 
 def confere_ats_gerados(mes, ano):
     df_ats_mentorh = le_ats_gerados_mentorh(mes, ano)
@@ -91,7 +91,7 @@ def main():
     parser.add_argument('mes', type=int, help="mes da folha normal sendo processada")
     parser.add_argument('ano', type=int, help="ano da folha normal sendo processada")
     parser.add_argument('-g', '--gera', action='store_true', help='gera ats e progressão na folha normal')
-    parser.add_argument('-c', '--confere', action='store_true', help='confere lançamentos e gera acerto de ferias. somente utilizr após gerar na folha')
+    parser.add_argument('-c', '--confere', action='store_true', help='confere lançamentos e gera acerto de ferias. somente utilizar após ter utilizado a opção -g anteriormente nesta folha')
     args = parser.parse_args()
 
     if args.gera == True:
